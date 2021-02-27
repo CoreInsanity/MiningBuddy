@@ -13,9 +13,8 @@ namespace MiningBuddy.Models.Bitvavo
         public string EndPoint => "deposit";
         [JsonIgnore]
         public string[] RequiredParams => new string[] { "symbol" };
-        [JsonProperty("address")]
+
         public string Address { get; set; }
-        [JsonProperty("paymentId")]
         public string PaymentID { get; set; }
     }
 }
