@@ -62,6 +62,7 @@ namespace MiningBuddy
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MinimizeButton = new System.Windows.Forms.PictureBox();
             this.CloseButton = new System.Windows.Forms.PictureBox();
+            this.IPLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.RigStatusPanel.SuspendLayout();
@@ -139,7 +140,7 @@ namespace MiningBuddy
             this.RigNameLabel.AutoSize = true;
             this.RigNameLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RigNameLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.RigNameLabel.Location = new System.Drawing.Point(16, 11);
+            this.RigNameLabel.Location = new System.Drawing.Point(16, 3);
             this.RigNameLabel.Name = "RigNameLabel";
             this.RigNameLabel.Size = new System.Drawing.Size(159, 30);
             this.RigNameLabel.TabIndex = 0;
@@ -190,6 +191,7 @@ namespace MiningBuddy
             // RigStatusPanel
             // 
             this.RigStatusPanel.BackColor = System.Drawing.Color.Green;
+            this.RigStatusPanel.Controls.Add(this.IPLabel);
             this.RigStatusPanel.Controls.Add(this.RefreshButton);
             this.RigStatusPanel.Controls.Add(this.RigNameLabel);
             this.RigStatusPanel.Location = new System.Drawing.Point(35, 87);
@@ -297,6 +299,7 @@ namespace MiningBuddy
             this.MiningBuddyVersionLabel.Size = new System.Drawing.Size(121, 17);
             this.MiningBuddyVersionLabel.TabIndex = 7;
             this.MiningBuddyVersionLabel.Text = "MiningBuddy x.x.x.x";
+            this.MiningBuddyVersionLabel.Click += new System.EventHandler(this.MiningBuddyVersionLabel_Click);
             // 
             // ViewDumpLabel
             // 
@@ -446,6 +449,17 @@ namespace MiningBuddy
             this.CloseButton.TabStop = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
+            // IPLabel
+            // 
+            this.IPLabel.AutoSize = true;
+            this.IPLabel.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IPLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.IPLabel.Location = new System.Drawing.Point(18, 35);
+            this.IPLabel.Name = "IPLabel";
+            this.IPLabel.Size = new System.Drawing.Size(63, 12);
+            this.IPLabel.TabIndex = 11;
+            this.IPLabel.Text = "127.0.0.1:1234";
+            // 
             // MiningBuddy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -527,6 +541,7 @@ namespace MiningBuddy
         private System.Windows.Forms.Label MiningBuddyVersionLabel;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label ViewDumpLabel;
+        private System.Windows.Forms.Label IPLabel;
     }
 }
 

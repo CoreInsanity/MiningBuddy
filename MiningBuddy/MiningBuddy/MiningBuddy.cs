@@ -10,12 +10,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MiningBuddy.Models.CDM;
+using MiningBuddy.Constants;
 
 namespace MiningBuddy
 {
     public partial class MiningBuddy : Form
     {
-        private Rig SelectedRig { get; set; }
         private Config Config { get; }
         private BitvavoHelper Bitvavo { get; }
         public MiningBuddy()
@@ -29,12 +29,16 @@ namespace MiningBuddy
         {
             InitUI();
             InitTimers();
+
+            var poolHelper = new PoolHelper();
+            poolHelper.Init<Models.Ethermine.Ethermine>(Config.Address);
+            var data = poolHelper.GetWorkerData<Models.Ethermine.Worker>(RigSelectComboBox.SelectedItem.ToString());
         }
 
         #region UI stuff
         private void InitUI()
         {
-            MiningBuddyVersionLabel.Text = $"MiningBuddy {Config.AppVersion}";
+            MiningBuddyVersionLabel.Text = MiningBuddyConstants.APPVERSION;
             EthAddressLabel.Text += Config.Address;
 
             RigSelectComboBox.Items.AddRange(Config.Rigs.Select(r => r.Name).ToArray());
@@ -127,6 +131,7 @@ namespace MiningBuddy
         {
             var selRigConf = Config.Rigs.FirstOrDefault(r => r.Name.Equals(RigSelectComboBox.SelectedItem.ToString()));
             RigNameLabel.Text = selRigConf.Name.ToUpper();
+            IPLabel.Text = $"{selRigConf.IP}:{selRigConf.Port}";
             var cdm = new CDMHelper(selRigConf);
             var rig = cdm.GetRealtimeRigData(out bool alive);
             
@@ -173,6 +178,11 @@ namespace MiningBuddy
         {
             var viewer = new CDMDumpViewer(Config.Rigs.FirstOrDefault(r => r.Name.Equals(RigSelectComboBox.SelectedItem.ToString())));
             viewer.ShowDialog();    
+        }
+
+        private void MiningBuddyVersionLabel_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(MiningBuddyConstants.ABOUT, MiningBuddyConstants.NOTIFICATION, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

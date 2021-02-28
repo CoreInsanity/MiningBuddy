@@ -56,7 +56,9 @@
       <DependentUpon>CDMDumpViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="Constants\BitvavoConstants.cs" />
+    <Compile Include="Constants\MiningBuddyConstants.cs" />
     <Compile Include="Helpers\CDMHelper.cs" />
+    <Compile Include="Helpers\PoolHelper.cs" />
     <Compile Include="MiningBuddy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,8 +73,13 @@
     <Compile Include="Models\Config\BitvavoConfig.cs" />
     <Compile Include="Models\Config\RigConfig.cs" />
     <Compile Include="Models\Config\Config.cs" />
+    <Compile Include="Models\Ethermine\Ethermine.cs" />
+    <Compile Include="Models\Ethermine\SearchResult.cs" />
+    <Compile Include="Models\Ethermine\Worker.cs" />
     <Compile Include="Models\Interfaces\IBitvavo.cs" />
     <Compile Include="Models\Bitvavo\Deposit.cs" />
+    <Compile Include="Models\Interfaces\IMiningPool.cs" />
+    <Compile Include="Models\Interfaces\IMiningPoolWorker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CDMDumpViewer.resx">
@@ -122,5 +129,6 @@
     <Content Include="Resources\Images\refresh_button.png" />
     <Content Include="Resources\Images\miningpool_icon.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

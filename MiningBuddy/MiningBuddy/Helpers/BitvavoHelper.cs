@@ -18,7 +18,7 @@ namespace MiningBuddy.Helpers
     {
         private WebClient Client { get; }
         private BitvavoConfig Config { get; }
-        public bool IsConfigured { get; set; }
+        public bool IsConfigured { get; private set; }
         public BitvavoHelper(BitvavoConfig config = null)
         {
             if (config == null)
