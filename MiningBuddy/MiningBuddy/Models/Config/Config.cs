@@ -10,6 +10,8 @@ namespace MiningBuddy.Models.Config
 {
     class Config
     {
+        [JsonIgnore]
+        public string AppVersion => "0.0.0.1";
         public string Address { get; set; }
         public BitvavoConfig Bitvavo { get; set; }
         public RigConfig[] Rigs { get; set; }

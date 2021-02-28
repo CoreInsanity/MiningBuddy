@@ -102,5 +102,15 @@
   <ItemGroup>
     <Resource Include="Resources\Images\minimize_button.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Images\accepted_share_icon.png" />
+    <Content Include="Resources\Images\graphics_card_icon.png" />
+    <Content Include="Resources\Images\mining_speed_icon.png" />
+    <Content Include="Resources\Images\max_difficulty_icon.png" />
+    <Content Include="Resources\Images\incorrect_share_icon.png" />
+    <Content Include="Resources\Images\rejected_share_icon.png" />
+    <Content Include="Resources\Images\refresh_button.png" />
+    <Content Include="Resources\Images\miningpool_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

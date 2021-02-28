@@ -23,7 +23,7 @@ namespace MiningBuddy.Helpers
         public Rig GetRealtimeRigData(out bool alive)
         {
             alive = false;
-            string data = String.Empty;
+            string data;
             try
             {
                 data = GetRawData();
@@ -55,7 +55,7 @@ namespace MiningBuddy.Helpers
                 GPUs = new List<GPU>()
             };
 
-            foreach (var line in rawOutput.Split('\n'))
+            foreach (var line in rawOutput?.Split('\n'))
             {
                 //This is about the rig
                 if (line.StartsWith("Eth:"))
