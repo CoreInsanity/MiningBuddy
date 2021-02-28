@@ -36,6 +36,10 @@ namespace MiningBuddy.Helpers
             alive = true;
             return ParseRigInfoFromPhoenix(data);
         }
+        public string GetPlainDump()
+        {
+            return CdmClient.DownloadString("");
+        }
         private string GetRawData()
         {
             var response = CdmClient.DownloadString("");

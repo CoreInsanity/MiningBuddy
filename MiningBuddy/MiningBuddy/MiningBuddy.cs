@@ -143,6 +143,12 @@ namespace MiningBuddy
                 AverageMiningSpeedLabel.Text = String.Empty;
                 EffectiveMiningSpeedLabel.Text = String.Empty;
                 ReportedMiningSpeedLabel.Text = String.Empty;
+                GraphicsCardLabel.Text = String.Empty;
+                ViewDumpLabel.Text = String.Empty;
+
+                ViewDumpLabel.Enabled = false;
+
+                RigNameLabel.Text += " (OFFLINE)";
 
                 return;
             }
@@ -156,9 +162,17 @@ namespace MiningBuddy
             EffectiveMiningSpeedLabel.Text = $"Effective {rig.EffectiveSpeed}";
             ReportedMiningSpeedLabel.Text = $"Reported {rig.PoolReportedSpeed}";
             GraphicsCardLabel.Text = $"{rig.GPUs[0].Name} ({rig.GPUs[0].Temperature}°C)";
+            ViewDumpLabel.Text = "View dump";
+
+            ViewDumpLabel.Enabled = true;
         }
+
         #endregion
 
-        
+        private void ViewDumpLabel_Click(object sender, EventArgs e)
+        {
+            var viewer = new CDMDumpViewer(Config.Rigs.FirstOrDefault(r => r.Name.Equals(RigSelectComboBox.SelectedItem.ToString())));
+            viewer.ShowDialog();    
+        }
     }
 }

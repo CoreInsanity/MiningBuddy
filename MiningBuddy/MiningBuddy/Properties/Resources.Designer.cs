@@ -83,6 +83,16 @@ namespace MiningBuddy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap commandline_icon {
+            get {
+                object obj = ResourceManager.GetObject("commandline_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap graphics_card_icon {
             get {
                 object obj = ResourceManager.GetObject("graphics_card_icon", resourceCulture);

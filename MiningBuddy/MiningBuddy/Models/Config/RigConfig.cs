@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MiningBuddy.Models.Config
 {
-    class RigConfig
+    public class RigConfig
     {
         public string IP { get; set; }
         public int Port { get; set; }

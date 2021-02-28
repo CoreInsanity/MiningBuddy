@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CDMDumpViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CDMDumpViewer.Designer.cs">
+      <DependentUpon>CDMDumpViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Constants\BitvavoConstants.cs" />
     <Compile Include="Helpers\CDMHelper.cs" />
     <Compile Include="MiningBuddy.cs">
@@ -69,6 +75,9 @@
     <Compile Include="Models\Bitvavo\Deposit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CDMDumpViewer.resx">
+      <DependentUpon>CDMDumpViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MiningBuddy.resx">
       <DependentUpon>MiningBuddy.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Images\accepted_share_icon.png" />
+    <Content Include="Resources\Images\commandline_icon.png" />
     <Content Include="Resources\Images\graphics_card_icon.png" />
     <Content Include="Resources\Images\mining_speed_icon.png" />
     <Content Include="Resources\Images\max_difficulty_icon.png" />

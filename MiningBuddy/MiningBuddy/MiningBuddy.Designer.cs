@@ -47,7 +47,10 @@ namespace MiningBuddy
             this.EffectiveMiningSpeedLabel = new System.Windows.Forms.Label();
             this.ReportedMiningSpeedLabel = new System.Windows.Forms.Label();
             this.GraphicsCardLabel = new System.Windows.Forms.Label();
+            this.MiningBuddyVersionLabel = new System.Windows.Forms.Label();
+            this.ViewDumpLabel = new System.Windows.Forms.Label();
             this.RefreshButton = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -59,11 +62,11 @@ namespace MiningBuddy
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MinimizeButton = new System.Windows.Forms.PictureBox();
             this.CloseButton = new System.Windows.Forms.PictureBox();
-            this.MiningBuddyVersionLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.RigStatusPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -82,7 +85,7 @@ namespace MiningBuddy
             this.EthAddressLabel.AutoSize = true;
             this.EthAddressLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EthAddressLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.EthAddressLabel.Location = new System.Drawing.Point(12, 611);
+            this.EthAddressLabel.Location = new System.Drawing.Point(12, 647);
             this.EthAddressLabel.Name = "EthAddressLabel";
             this.EthAddressLabel.Size = new System.Drawing.Size(104, 21);
             this.EthAddressLabel.TabIndex = 0;
@@ -93,7 +96,7 @@ namespace MiningBuddy
             this.BitvavoStatusLabel.AutoSize = true;
             this.BitvavoStatusLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BitvavoStatusLabel.ForeColor = System.Drawing.Color.OrangeRed;
-            this.BitvavoStatusLabel.Location = new System.Drawing.Point(13, 640);
+            this.BitvavoStatusLabel.Location = new System.Drawing.Point(13, 676);
             this.BitvavoStatusLabel.Name = "BitvavoStatusLabel";
             this.BitvavoStatusLabel.Size = new System.Drawing.Size(135, 15);
             this.BitvavoStatusLabel.TabIndex = 1;
@@ -127,7 +130,7 @@ namespace MiningBuddy
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(35, 81);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(526, 515);
+            this.groupBox1.Size = new System.Drawing.Size(526, 547);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
@@ -144,6 +147,8 @@ namespace MiningBuddy
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.pictureBox10);
+            this.groupBox2.Controls.Add(this.ViewDumpLabel);
             this.groupBox2.Controls.Add(this.pictureBox9);
             this.groupBox2.Controls.Add(this.GraphicsCardLabel);
             this.groupBox2.Controls.Add(this.pictureBox8);
@@ -166,7 +171,7 @@ namespace MiningBuddy
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Location = new System.Drawing.Point(19, 68);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(238, 432);
+            this.groupBox2.Size = new System.Drawing.Size(238, 467);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Miner";
@@ -177,7 +182,7 @@ namespace MiningBuddy
             this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox3.Location = new System.Drawing.Point(271, 68);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(238, 432);
+            this.groupBox3.Size = new System.Drawing.Size(238, 467);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pool";
@@ -282,6 +287,29 @@ namespace MiningBuddy
             this.GraphicsCardLabel.Text = "GeForce RTX 3070 (55°C)";
             this.GraphicsCardLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // MiningBuddyVersionLabel
+            // 
+            this.MiningBuddyVersionLabel.AutoSize = true;
+            this.MiningBuddyVersionLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MiningBuddyVersionLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.MiningBuddyVersionLabel.Location = new System.Drawing.Point(466, 682);
+            this.MiningBuddyVersionLabel.Name = "MiningBuddyVersionLabel";
+            this.MiningBuddyVersionLabel.Size = new System.Drawing.Size(121, 17);
+            this.MiningBuddyVersionLabel.TabIndex = 7;
+            this.MiningBuddyVersionLabel.Text = "MiningBuddy x.x.x.x";
+            // 
+            // ViewDumpLabel
+            // 
+            this.ViewDumpLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ViewDumpLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewDumpLabel.Location = new System.Drawing.Point(50, 431);
+            this.ViewDumpLabel.Name = "ViewDumpLabel";
+            this.ViewDumpLabel.Size = new System.Drawing.Size(177, 23);
+            this.ViewDumpLabel.TabIndex = 26;
+            this.ViewDumpLabel.Text = "View dump";
+            this.ViewDumpLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.ViewDumpLabel.Click += new System.EventHandler(this.ViewDumpLabel_Click);
+            // 
             // RefreshButton
             // 
             this.RefreshButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -293,6 +321,16 @@ namespace MiningBuddy
             this.RefreshButton.TabIndex = 10;
             this.RefreshButton.TabStop = false;
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::MiningBuddy.Properties.Resources.commandline_icon;
+            this.pictureBox10.Location = new System.Drawing.Point(13, 424);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(31, 35);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 27;
+            this.pictureBox10.TabStop = false;
             // 
             // pictureBox9
             // 
@@ -408,23 +446,12 @@ namespace MiningBuddy
             this.CloseButton.TabStop = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
-            // MiningBuddyVersionLabel
-            // 
-            this.MiningBuddyVersionLabel.AutoSize = true;
-            this.MiningBuddyVersionLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MiningBuddyVersionLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.MiningBuddyVersionLabel.Location = new System.Drawing.Point(466, 646);
-            this.MiningBuddyVersionLabel.Name = "MiningBuddyVersionLabel";
-            this.MiningBuddyVersionLabel.Size = new System.Drawing.Size(121, 17);
-            this.MiningBuddyVersionLabel.TabIndex = 7;
-            this.MiningBuddyVersionLabel.Text = "MiningBuddy x.x.x.x";
-            // 
             // MiningBuddy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(13)))), ((int)(((byte)(21)))));
-            this.ClientSize = new System.Drawing.Size(598, 670);
+            this.ClientSize = new System.Drawing.Size(598, 707);
             this.Controls.Add(this.MiningBuddyVersionLabel);
             this.Controls.Add(this.RigStatusPanel);
             this.Controls.Add(this.groupBox1);
@@ -448,6 +475,7 @@ namespace MiningBuddy
             this.RigStatusPanel.ResumeLayout(false);
             this.RigStatusPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -497,6 +525,8 @@ namespace MiningBuddy
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label GraphicsCardLabel;
         private System.Windows.Forms.Label MiningBuddyVersionLabel;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Label ViewDumpLabel;
     }
 }
 
