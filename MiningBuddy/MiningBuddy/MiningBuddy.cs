@@ -29,6 +29,9 @@ namespace MiningBuddy
         {
             InitUI();
             InitTimers();
+
+            var cdm = new CDMHelper(Config.Rigs[0]);
+            cdm.GetRealtimeRigData(out bool alive);
         }
 
         #region UI stuff

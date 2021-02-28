@@ -12,5 +12,6 @@ namespace MiningBuddy.Models.Config
     {
         public string Address { get; set; }
         public BitvavoConfig Bitvavo { get; set; }
+        public RigConfig[] Rigs { get; set; }
     }
 }

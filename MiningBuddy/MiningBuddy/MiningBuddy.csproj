@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\BitvavoConstants.cs" />
+    <Compile Include="Helpers\CDMHelper.cs" />
     <Compile Include="MiningBuddy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,7 +60,10 @@
     <Compile Include="Helpers\BitvavoHelper.cs" />
     <Compile Include="Helpers\ConfigHelper.cs" />
     <Compile Include="Helpers\CryptographyHelper.cs" />
+    <Compile Include="Models\CDM\GPU.cs" />
+    <Compile Include="Models\CDM\Rig.cs" />
     <Compile Include="Models\Config\BitvavoConfig.cs" />
+    <Compile Include="Models\Config\RigConfig.cs" />
     <Compile Include="Models\Config\Config.cs" />
     <Compile Include="Models\Interfaces\IBitvavo.cs" />
     <Compile Include="Models\Bitvavo\Deposit.cs" />
