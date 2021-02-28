@@ -23,7 +23,10 @@ namespace MiningBuddy.Models.Ethermine
 
         public string HashRateToString(double? hashRate)
         {
-            throw new NotImplementedException();
+            if (!hashRate.HasValue)
+                return "0 MH/s";
+
+            return $"{Math.Round(hashRate.Value / 1000000.0, 2)} MH/s";
         }
     }
 }

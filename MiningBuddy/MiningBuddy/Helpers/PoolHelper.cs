@@ -13,7 +13,7 @@ namespace MiningBuddy.Helpers
     class PoolHelper
     {
         private WebClient PoolClient { get; set; }
-        private IMiningPool Pool { get; set; }
+        public IMiningPool Pool { get; private set; }
         public bool IsInitialized { get; private set; }
 
         public void Init<T>(string address) where T : IMiningPool, new()

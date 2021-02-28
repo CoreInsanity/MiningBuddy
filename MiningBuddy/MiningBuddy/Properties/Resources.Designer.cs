@@ -93,6 +93,16 @@ namespace MiningBuddy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fan_icon {
+            get {
+                object obj = ResourceManager.GetObject("fan_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap graphics_card_icon {
             get {
                 object obj = ResourceManager.GetObject("graphics_card_icon", resourceCulture);
@@ -153,6 +163,16 @@ namespace MiningBuddy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap power_icon {
+            get {
+                object obj = ResourceManager.GetObject("power_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap refresh_button {
             get {
                 object obj = ResourceManager.GetObject("refresh_button", resourceCulture);
@@ -166,6 +186,16 @@ namespace MiningBuddy.Properties {
         internal static System.Drawing.Bitmap rejected_share_icon {
             get {
                 object obj = ResourceManager.GetObject("rejected_share_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap temperature_icon {
+            get {
+                object obj = ResourceManager.GetObject("temperature_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

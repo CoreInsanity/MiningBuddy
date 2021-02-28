@@ -121,6 +121,9 @@
   <ItemGroup>
     <Content Include="Resources\Images\accepted_share_icon.png" />
     <Content Include="Resources\Images\commandline_icon.png" />
+    <Content Include="Resources\Images\power_icon.png" />
+    <Content Include="Resources\Images\fan_icon.png" />
+    <Content Include="Resources\Images\temperature_icon.png" />
     <Content Include="Resources\Images\graphics_card_icon.png" />
     <Content Include="Resources\Images\mining_speed_icon.png" />
     <Content Include="Resources\Images\max_difficulty_icon.png" />

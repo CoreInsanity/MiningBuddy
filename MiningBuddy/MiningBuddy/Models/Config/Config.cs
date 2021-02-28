@@ -11,6 +11,7 @@ namespace MiningBuddy.Models.Config
     class Config
     {
         public string Address { get; set; }
+        public string PoolName { get; set; }
         public BitvavoConfig Bitvavo { get; set; }
         public RigConfig[] Rigs { get; set; }
     }

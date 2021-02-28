@@ -29,10 +29,6 @@ namespace MiningBuddy
         {
             InitUI();
             InitTimers();
-
-            var poolHelper = new PoolHelper();
-            poolHelper.Init<Models.Ethermine.Ethermine>(Config.Address);
-            var data = poolHelper.GetWorkerData<Models.Ethermine.Worker>(RigSelectComboBox.SelectedItem.ToString());
         }
 
         #region UI stuff
@@ -59,6 +55,7 @@ namespace MiningBuddy
         private void RigSelectComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             RefreshRigStatus();
+            RefreshPoolStatus();
         }
 
         /// <summary>
@@ -100,6 +97,7 @@ namespace MiningBuddy
         private void EveryFiveMinuteJobs(object sender, EventArgs e)
         {
             CheckBitvavoStatus();
+            RefreshPoolStatus();
         }
         private void EveryMinuteJobs(object sender, EventArgs e)
         {
@@ -124,8 +122,31 @@ namespace MiningBuddy
                 return;
             }
 
-            BitvavoStatusLabel.Text = Constants.BitvavoConstants.BITVAVOCONNECTED;
+            BitvavoStatusLabel.Text = BitvavoConstants.BITVAVOCONNECTED;
             BitvavoStatusLabel.ForeColor = Color.Green;
+        }
+        private void RefreshPoolStatus()
+        {
+            var poolHelper = new PoolHelper();
+            Models.Interfaces.IMiningPoolWorker worker;
+
+            switch (Config.PoolName.ToLower())
+            {
+                case "ethermine":
+                    poolHelper.Init<Models.Ethermine.Ethermine>(Config.Address);
+                    worker = poolHelper.GetWorkerData<Models.Ethermine.Worker>(RigSelectComboBox.SelectedItem.ToString());
+                    break;
+                default:
+                    throw new ArgumentException("This pool is unknown, please fix");
+            }
+            
+
+            MiningPoolNameLabel.Text = poolHelper.Pool.PoolName;
+            PoolAverageMiningSpeedLabel.Text = $"Average {worker.HashRateToString(worker.AverageHashrate)}";
+            PoolCurrentMiningSpeedLabel.Text = $"Current {worker.HashRateToString(worker.CurrentHashrate)}";
+            PoolReportedMiningSpeedLabel.Text = $"Reported {worker.HashRateToString(worker.ReportedHashrate)}";
+            PoolAcceptedSharesLabel.Text = $"{worker.ValidShares} ({worker.StaleShares} Stales)";
+            PoolIncorrectSharesLabel.Text = worker.InvalidShares.ToString();
         }
         private void RefreshRigStatus()
         {
@@ -150,6 +171,9 @@ namespace MiningBuddy
                 ReportedMiningSpeedLabel.Text = String.Empty;
                 GraphicsCardLabel.Text = String.Empty;
                 ViewDumpLabel.Text = String.Empty;
+                GPUTemperatureLabel.Text = String.Empty;
+                GPUFanSpeedLabel.Text = String.Empty;
+                GPUPowerConsumptionLabel.Text = String.Empty;
 
                 ViewDumpLabel.Enabled = false;
 
@@ -166,8 +190,11 @@ namespace MiningBuddy
             AverageMiningSpeedLabel.Text = $"Average {rig.AverageSpeed}";
             EffectiveMiningSpeedLabel.Text = $"Effective {rig.EffectiveSpeed}";
             ReportedMiningSpeedLabel.Text = $"Reported {rig.PoolReportedSpeed}";
-            GraphicsCardLabel.Text = $"{rig.GPUs[0].Name} ({rig.GPUs[0].Temperature}°C)";
+            GraphicsCardLabel.Text = rig.GPUs[0].Name;
             ViewDumpLabel.Text = "View dump";
+            GPUTemperatureLabel.Text = $"{rig.GPUs[0].Temperature}°C";
+            GPUFanSpeedLabel.Text = $"{rig.GPUs[0].FanSpeed}%";
+            GPUPowerConsumptionLabel.Text = $"{rig.GPUs[0].PowerConsumption}W";
 
             ViewDumpLabel.Enabled = true;
         }
@@ -183,6 +210,11 @@ namespace MiningBuddy
         private void MiningBuddyVersionLabel_Click(object sender, EventArgs e)
         {
             MessageBox.Show(MiningBuddyConstants.ABOUT, MiningBuddyConstants.NOTIFICATION, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void GraphicsCardLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
