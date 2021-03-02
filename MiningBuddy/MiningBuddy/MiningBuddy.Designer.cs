@@ -34,36 +34,38 @@ namespace MiningBuddy
             this.RigSelectComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.RigNameLabel = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.GPUFanSpeedLabel = new System.Windows.Forms.Label();
+            this.GPUPowerConsumptionLabel = new System.Windows.Forms.Label();
+            this.GPUTemperatureLabel = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.RigStatusPanel = new System.Windows.Forms.Panel();
-            this.MiningPoolLabel = new System.Windows.Forms.Label();
-            this.AcceptedSharesLabel = new System.Windows.Forms.Label();
-            this.RejectedSharesLabel = new System.Windows.Forms.Label();
-            this.IncorrectSharesLabel = new System.Windows.Forms.Label();
-            this.MaxFoundDifficultyLabel = new System.Windows.Forms.Label();
-            this.AverageMiningSpeedLabel = new System.Windows.Forms.Label();
-            this.EffectiveMiningSpeedLabel = new System.Windows.Forms.Label();
-            this.ReportedMiningSpeedLabel = new System.Windows.Forms.Label();
-            this.GraphicsCardLabel = new System.Windows.Forms.Label();
-            this.MiningBuddyVersionLabel = new System.Windows.Forms.Label();
-            this.ViewDumpLabel = new System.Windows.Forms.Label();
-            this.IPLabel = new System.Windows.Forms.Label();
-            this.PoolReportedMiningSpeedLabel = new System.Windows.Forms.Label();
-            this.PoolCurrentMiningSpeedLabel = new System.Windows.Forms.Label();
-            this.PoolAverageMiningSpeedLabel = new System.Windows.Forms.Label();
-            this.MiningPoolNameLabel = new System.Windows.Forms.Label();
             this.PoolAcceptedSharesLabel = new System.Windows.Forms.Label();
             this.PoolIncorrectSharesLabel = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.GPUPowerConsumptionLabel = new System.Windows.Forms.Label();
-            this.GPUFanSpeedLabel = new System.Windows.Forms.Label();
-            this.GPUTemperatureLabel = new System.Windows.Forms.Label();
+            this.MiningPoolNameLabel = new System.Windows.Forms.Label();
+            this.PoolAverageMiningSpeedLabel = new System.Windows.Forms.Label();
+            this.PoolReportedMiningSpeedLabel = new System.Windows.Forms.Label();
+            this.PoolCurrentMiningSpeedLabel = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ViewDumpLabel = new System.Windows.Forms.Label();
+            this.GraphicsCardLabel = new System.Windows.Forms.Label();
+            this.ReportedMiningSpeedLabel = new System.Windows.Forms.Label();
+            this.EffectiveMiningSpeedLabel = new System.Windows.Forms.Label();
+            this.AverageMiningSpeedLabel = new System.Windows.Forms.Label();
+            this.MaxFoundDifficultyLabel = new System.Windows.Forms.Label();
+            this.IncorrectSharesLabel = new System.Windows.Forms.Label();
+            this.RejectedSharesLabel = new System.Windows.Forms.Label();
+            this.AcceptedSharesLabel = new System.Windows.Forms.Label();
+            this.MiningPoolLabel = new System.Windows.Forms.Label();
+            this.RigNameLabel = new System.Windows.Forms.Label();
+            this.RigStatusPanel = new System.Windows.Forms.Panel();
+            this.IPLabel = new System.Windows.Forms.Label();
+            this.MiningBuddyVersionLabel = new System.Windows.Forms.Label();
+            this.PoolEarningsLabel = new System.Windows.Forms.Label();
             this.RefreshButton = new System.Windows.Forms.PictureBox();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
@@ -83,14 +85,15 @@ namespace MiningBuddy
             this.MinimizeButton = new System.Windows.Forms.PictureBox();
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.RigStatusPanel.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.RigStatusPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RefreshButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -116,7 +119,7 @@ namespace MiningBuddy
             this.EthAddressLabel.AutoSize = true;
             this.EthAddressLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EthAddressLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.EthAddressLabel.Location = new System.Drawing.Point(12, 647);
+            this.EthAddressLabel.Location = new System.Drawing.Point(12, 688);
             this.EthAddressLabel.Name = "EthAddressLabel";
             this.EthAddressLabel.Size = new System.Drawing.Size(104, 21);
             this.EthAddressLabel.TabIndex = 0;
@@ -127,7 +130,7 @@ namespace MiningBuddy
             this.BitvavoStatusLabel.AutoSize = true;
             this.BitvavoStatusLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BitvavoStatusLabel.ForeColor = System.Drawing.Color.OrangeRed;
-            this.BitvavoStatusLabel.Location = new System.Drawing.Point(13, 676);
+            this.BitvavoStatusLabel.Location = new System.Drawing.Point(13, 717);
             this.BitvavoStatusLabel.Name = "BitvavoStatusLabel";
             this.BitvavoStatusLabel.Size = new System.Drawing.Size(135, 15);
             this.BitvavoStatusLabel.TabIndex = 1;
@@ -162,20 +165,142 @@ namespace MiningBuddy
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(35, 81);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(526, 547);
+            this.groupBox1.Size = new System.Drawing.Size(526, 591);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
-            // RigNameLabel
+            // groupBox4
             // 
-            this.RigNameLabel.AutoSize = true;
-            this.RigNameLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RigNameLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.RigNameLabel.Location = new System.Drawing.Point(16, 3);
-            this.RigNameLabel.Name = "RigNameLabel";
-            this.RigNameLabel.Size = new System.Drawing.Size(159, 30);
-            this.RigNameLabel.TabIndex = 0;
-            this.RigNameLabel.Text = "Mining_Rig_001";
+            this.groupBox4.Controls.Add(this.pictureBox17);
+            this.groupBox4.Controls.Add(this.GPUFanSpeedLabel);
+            this.groupBox4.Controls.Add(this.GPUPowerConsumptionLabel);
+            this.groupBox4.Controls.Add(this.GPUTemperatureLabel);
+            this.groupBox4.Controls.Add(this.pictureBox18);
+            this.groupBox4.Controls.Add(this.pictureBox19);
+            this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox4.Location = new System.Drawing.Point(271, 416);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(238, 163);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "GPU";
+            // 
+            // GPUFanSpeedLabel
+            // 
+            this.GPUFanSpeedLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GPUFanSpeedLabel.Location = new System.Drawing.Point(45, 83);
+            this.GPUFanSpeedLabel.Name = "GPUFanSpeedLabel";
+            this.GPUFanSpeedLabel.Size = new System.Drawing.Size(177, 23);
+            this.GPUFanSpeedLabel.TabIndex = 30;
+            this.GPUFanSpeedLabel.Text = "60%";
+            this.GPUFanSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // GPUPowerConsumptionLabel
+            // 
+            this.GPUPowerConsumptionLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GPUPowerConsumptionLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GPUPowerConsumptionLabel.Location = new System.Drawing.Point(45, 127);
+            this.GPUPowerConsumptionLabel.Name = "GPUPowerConsumptionLabel";
+            this.GPUPowerConsumptionLabel.Size = new System.Drawing.Size(177, 23);
+            this.GPUPowerConsumptionLabel.TabIndex = 32;
+            this.GPUPowerConsumptionLabel.Text = "220W";
+            this.GPUPowerConsumptionLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // GPUTemperatureLabel
+            // 
+            this.GPUTemperatureLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GPUTemperatureLabel.Location = new System.Drawing.Point(45, 38);
+            this.GPUTemperatureLabel.Name = "GPUTemperatureLabel";
+            this.GPUTemperatureLabel.Size = new System.Drawing.Size(177, 23);
+            this.GPUTemperatureLabel.TabIndex = 28;
+            this.GPUTemperatureLabel.Text = "55°C";
+            this.GPUTemperatureLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.pictureBox20);
+            this.groupBox3.Controls.Add(this.PoolEarningsLabel);
+            this.groupBox3.Controls.Add(this.pictureBox16);
+            this.groupBox3.Controls.Add(this.PoolAcceptedSharesLabel);
+            this.groupBox3.Controls.Add(this.PoolIncorrectSharesLabel);
+            this.groupBox3.Controls.Add(this.pictureBox15);
+            this.groupBox3.Controls.Add(this.MiningPoolNameLabel);
+            this.groupBox3.Controls.Add(this.pictureBox14);
+            this.groupBox3.Controls.Add(this.pictureBox11);
+            this.groupBox3.Controls.Add(this.PoolAverageMiningSpeedLabel);
+            this.groupBox3.Controls.Add(this.PoolReportedMiningSpeedLabel);
+            this.groupBox3.Controls.Add(this.pictureBox13);
+            this.groupBox3.Controls.Add(this.pictureBox12);
+            this.groupBox3.Controls.Add(this.PoolCurrentMiningSpeedLabel);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
+            this.groupBox3.Location = new System.Drawing.Point(271, 68);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(238, 333);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Pool";
+            // 
+            // PoolAcceptedSharesLabel
+            // 
+            this.PoolAcceptedSharesLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PoolAcceptedSharesLabel.Location = new System.Drawing.Point(45, 76);
+            this.PoolAcceptedSharesLabel.Name = "PoolAcceptedSharesLabel";
+            this.PoolAcceptedSharesLabel.Size = new System.Drawing.Size(177, 23);
+            this.PoolAcceptedSharesLabel.TabIndex = 29;
+            this.PoolAcceptedSharesLabel.Text = "1234 (5 Stales)";
+            this.PoolAcceptedSharesLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // PoolIncorrectSharesLabel
+            // 
+            this.PoolIncorrectSharesLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PoolIncorrectSharesLabel.Location = new System.Drawing.Point(45, 119);
+            this.PoolIncorrectSharesLabel.Name = "PoolIncorrectSharesLabel";
+            this.PoolIncorrectSharesLabel.Size = new System.Drawing.Size(177, 23);
+            this.PoolIncorrectSharesLabel.TabIndex = 28;
+            this.PoolIncorrectSharesLabel.Text = "1234";
+            this.PoolIncorrectSharesLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // MiningPoolNameLabel
+            // 
+            this.MiningPoolNameLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MiningPoolNameLabel.Location = new System.Drawing.Point(48, 32);
+            this.MiningPoolNameLabel.Name = "MiningPoolNameLabel";
+            this.MiningPoolNameLabel.Size = new System.Drawing.Size(178, 17);
+            this.MiningPoolNameLabel.TabIndex = 28;
+            this.MiningPoolNameLabel.Text = "Ethminer";
+            this.MiningPoolNameLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // PoolAverageMiningSpeedLabel
+            // 
+            this.PoolAverageMiningSpeedLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PoolAverageMiningSpeedLabel.Location = new System.Drawing.Point(47, 164);
+            this.PoolAverageMiningSpeedLabel.Name = "PoolAverageMiningSpeedLabel";
+            this.PoolAverageMiningSpeedLabel.Size = new System.Drawing.Size(177, 23);
+            this.PoolAverageMiningSpeedLabel.TabIndex = 28;
+            this.PoolAverageMiningSpeedLabel.Text = "Average 99 MH/s";
+            this.PoolAverageMiningSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // PoolReportedMiningSpeedLabel
+            // 
+            this.PoolReportedMiningSpeedLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PoolReportedMiningSpeedLabel.Location = new System.Drawing.Point(47, 253);
+            this.PoolReportedMiningSpeedLabel.Name = "PoolReportedMiningSpeedLabel";
+            this.PoolReportedMiningSpeedLabel.Size = new System.Drawing.Size(177, 23);
+            this.PoolReportedMiningSpeedLabel.TabIndex = 32;
+            this.PoolReportedMiningSpeedLabel.Text = "Reported 99 MH/s";
+            this.PoolReportedMiningSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // PoolCurrentMiningSpeedLabel
+            // 
+            this.PoolCurrentMiningSpeedLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PoolCurrentMiningSpeedLabel.Location = new System.Drawing.Point(47, 208);
+            this.PoolCurrentMiningSpeedLabel.Name = "PoolCurrentMiningSpeedLabel";
+            this.PoolCurrentMiningSpeedLabel.Size = new System.Drawing.Size(177, 23);
+            this.PoolCurrentMiningSpeedLabel.TabIndex = 30;
+            this.PoolCurrentMiningSpeedLabel.Text = "Current 99 MH/s";
+            this.PoolCurrentMiningSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // groupBox2
             // 
@@ -203,148 +328,10 @@ namespace MiningBuddy
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Location = new System.Drawing.Point(19, 68);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(238, 467);
+            this.groupBox2.Size = new System.Drawing.Size(238, 511);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Miner";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.pictureBox16);
-            this.groupBox3.Controls.Add(this.PoolAcceptedSharesLabel);
-            this.groupBox3.Controls.Add(this.PoolIncorrectSharesLabel);
-            this.groupBox3.Controls.Add(this.pictureBox15);
-            this.groupBox3.Controls.Add(this.MiningPoolNameLabel);
-            this.groupBox3.Controls.Add(this.pictureBox14);
-            this.groupBox3.Controls.Add(this.pictureBox11);
-            this.groupBox3.Controls.Add(this.PoolAverageMiningSpeedLabel);
-            this.groupBox3.Controls.Add(this.PoolReportedMiningSpeedLabel);
-            this.groupBox3.Controls.Add(this.pictureBox13);
-            this.groupBox3.Controls.Add(this.pictureBox12);
-            this.groupBox3.Controls.Add(this.PoolCurrentMiningSpeedLabel);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox3.Location = new System.Drawing.Point(271, 68);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(238, 290);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Pool";
-            // 
-            // RigStatusPanel
-            // 
-            this.RigStatusPanel.BackColor = System.Drawing.Color.Green;
-            this.RigStatusPanel.Controls.Add(this.IPLabel);
-            this.RigStatusPanel.Controls.Add(this.RefreshButton);
-            this.RigStatusPanel.Controls.Add(this.RigNameLabel);
-            this.RigStatusPanel.Location = new System.Drawing.Point(35, 87);
-            this.RigStatusPanel.Name = "RigStatusPanel";
-            this.RigStatusPanel.Size = new System.Drawing.Size(526, 54);
-            this.RigStatusPanel.TabIndex = 3;
-            // 
-            // MiningPoolLabel
-            // 
-            this.MiningPoolLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MiningPoolLabel.Location = new System.Drawing.Point(48, 32);
-            this.MiningPoolLabel.Name = "MiningPoolLabel";
-            this.MiningPoolLabel.Size = new System.Drawing.Size(178, 17);
-            this.MiningPoolLabel.TabIndex = 7;
-            this.MiningPoolLabel.Text = "ETH.MININGPOOL.COM:1234";
-            this.MiningPoolLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // AcceptedSharesLabel
-            // 
-            this.AcceptedSharesLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AcceptedSharesLabel.Location = new System.Drawing.Point(49, 76);
-            this.AcceptedSharesLabel.Name = "AcceptedSharesLabel";
-            this.AcceptedSharesLabel.Size = new System.Drawing.Size(177, 23);
-            this.AcceptedSharesLabel.TabIndex = 9;
-            this.AcceptedSharesLabel.Text = "1234 (5 Stales)";
-            this.AcceptedSharesLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // RejectedSharesLabel
-            // 
-            this.RejectedSharesLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RejectedSharesLabel.Location = new System.Drawing.Point(49, 119);
-            this.RejectedSharesLabel.Name = "RejectedSharesLabel";
-            this.RejectedSharesLabel.Size = new System.Drawing.Size(177, 23);
-            this.RejectedSharesLabel.TabIndex = 11;
-            this.RejectedSharesLabel.Text = "1234 (5 Stales)";
-            this.RejectedSharesLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // IncorrectSharesLabel
-            // 
-            this.IncorrectSharesLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IncorrectSharesLabel.Location = new System.Drawing.Point(49, 164);
-            this.IncorrectSharesLabel.Name = "IncorrectSharesLabel";
-            this.IncorrectSharesLabel.Size = new System.Drawing.Size(177, 23);
-            this.IncorrectSharesLabel.TabIndex = 13;
-            this.IncorrectSharesLabel.Text = "1234";
-            this.IncorrectSharesLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // MaxFoundDifficultyLabel
-            // 
-            this.MaxFoundDifficultyLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaxFoundDifficultyLabel.Location = new System.Drawing.Point(50, 209);
-            this.MaxFoundDifficultyLabel.Name = "MaxFoundDifficultyLabel";
-            this.MaxFoundDifficultyLabel.Size = new System.Drawing.Size(177, 23);
-            this.MaxFoundDifficultyLabel.TabIndex = 16;
-            this.MaxFoundDifficultyLabel.Text = "99 GH/s (!)";
-            this.MaxFoundDifficultyLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // AverageMiningSpeedLabel
-            // 
-            this.AverageMiningSpeedLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AverageMiningSpeedLabel.Location = new System.Drawing.Point(50, 253);
-            this.AverageMiningSpeedLabel.Name = "AverageMiningSpeedLabel";
-            this.AverageMiningSpeedLabel.Size = new System.Drawing.Size(177, 23);
-            this.AverageMiningSpeedLabel.TabIndex = 18;
-            this.AverageMiningSpeedLabel.Text = "Average 99 MH/s";
-            this.AverageMiningSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // EffectiveMiningSpeedLabel
-            // 
-            this.EffectiveMiningSpeedLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EffectiveMiningSpeedLabel.Location = new System.Drawing.Point(50, 297);
-            this.EffectiveMiningSpeedLabel.Name = "EffectiveMiningSpeedLabel";
-            this.EffectiveMiningSpeedLabel.Size = new System.Drawing.Size(177, 23);
-            this.EffectiveMiningSpeedLabel.TabIndex = 20;
-            this.EffectiveMiningSpeedLabel.Text = "Effective 99 MH/s";
-            this.EffectiveMiningSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // ReportedMiningSpeedLabel
-            // 
-            this.ReportedMiningSpeedLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReportedMiningSpeedLabel.Location = new System.Drawing.Point(50, 342);
-            this.ReportedMiningSpeedLabel.Name = "ReportedMiningSpeedLabel";
-            this.ReportedMiningSpeedLabel.Size = new System.Drawing.Size(177, 23);
-            this.ReportedMiningSpeedLabel.TabIndex = 22;
-            this.ReportedMiningSpeedLabel.Text = "Reported 99 MH/s";
-            this.ReportedMiningSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // GraphicsCardLabel
-            // 
-            this.GraphicsCardLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.GraphicsCardLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GraphicsCardLabel.Location = new System.Drawing.Point(50, 387);
-            this.GraphicsCardLabel.Name = "GraphicsCardLabel";
-            this.GraphicsCardLabel.Size = new System.Drawing.Size(177, 23);
-            this.GraphicsCardLabel.TabIndex = 24;
-            this.GraphicsCardLabel.Text = "GeForce RTX 3070";
-            this.GraphicsCardLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.GraphicsCardLabel.Click += new System.EventHandler(this.GraphicsCardLabel_Click);
-            // 
-            // MiningBuddyVersionLabel
-            // 
-            this.MiningBuddyVersionLabel.AutoSize = true;
-            this.MiningBuddyVersionLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MiningBuddyVersionLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.MiningBuddyVersionLabel.Location = new System.Drawing.Point(466, 682);
-            this.MiningBuddyVersionLabel.Name = "MiningBuddyVersionLabel";
-            this.MiningBuddyVersionLabel.Size = new System.Drawing.Size(121, 17);
-            this.MiningBuddyVersionLabel.TabIndex = 7;
-            this.MiningBuddyVersionLabel.Text = "MiningBuddy x.x.x.x";
-            this.MiningBuddyVersionLabel.Click += new System.EventHandler(this.MiningBuddyVersionLabel_Click);
             // 
             // ViewDumpLabel
             // 
@@ -358,6 +345,120 @@ namespace MiningBuddy
             this.ViewDumpLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.ViewDumpLabel.Click += new System.EventHandler(this.ViewDumpLabel_Click);
             // 
+            // GraphicsCardLabel
+            // 
+            this.GraphicsCardLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GraphicsCardLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GraphicsCardLabel.Location = new System.Drawing.Point(50, 387);
+            this.GraphicsCardLabel.Name = "GraphicsCardLabel";
+            this.GraphicsCardLabel.Size = new System.Drawing.Size(177, 23);
+            this.GraphicsCardLabel.TabIndex = 24;
+            this.GraphicsCardLabel.Text = "GeForce RTX 3070";
+            this.GraphicsCardLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.GraphicsCardLabel.Click += new System.EventHandler(this.GraphicsCardLabel_Click);
+            // 
+            // ReportedMiningSpeedLabel
+            // 
+            this.ReportedMiningSpeedLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportedMiningSpeedLabel.Location = new System.Drawing.Point(50, 342);
+            this.ReportedMiningSpeedLabel.Name = "ReportedMiningSpeedLabel";
+            this.ReportedMiningSpeedLabel.Size = new System.Drawing.Size(177, 23);
+            this.ReportedMiningSpeedLabel.TabIndex = 22;
+            this.ReportedMiningSpeedLabel.Text = "Reported 99 MH/s";
+            this.ReportedMiningSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // EffectiveMiningSpeedLabel
+            // 
+            this.EffectiveMiningSpeedLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EffectiveMiningSpeedLabel.Location = new System.Drawing.Point(50, 297);
+            this.EffectiveMiningSpeedLabel.Name = "EffectiveMiningSpeedLabel";
+            this.EffectiveMiningSpeedLabel.Size = new System.Drawing.Size(177, 23);
+            this.EffectiveMiningSpeedLabel.TabIndex = 20;
+            this.EffectiveMiningSpeedLabel.Text = "Effective 99 MH/s";
+            this.EffectiveMiningSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // AverageMiningSpeedLabel
+            // 
+            this.AverageMiningSpeedLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AverageMiningSpeedLabel.Location = new System.Drawing.Point(50, 253);
+            this.AverageMiningSpeedLabel.Name = "AverageMiningSpeedLabel";
+            this.AverageMiningSpeedLabel.Size = new System.Drawing.Size(177, 23);
+            this.AverageMiningSpeedLabel.TabIndex = 18;
+            this.AverageMiningSpeedLabel.Text = "Average 99 MH/s";
+            this.AverageMiningSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // MaxFoundDifficultyLabel
+            // 
+            this.MaxFoundDifficultyLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaxFoundDifficultyLabel.Location = new System.Drawing.Point(50, 209);
+            this.MaxFoundDifficultyLabel.Name = "MaxFoundDifficultyLabel";
+            this.MaxFoundDifficultyLabel.Size = new System.Drawing.Size(177, 23);
+            this.MaxFoundDifficultyLabel.TabIndex = 16;
+            this.MaxFoundDifficultyLabel.Text = "99 GH/s (!)";
+            this.MaxFoundDifficultyLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // IncorrectSharesLabel
+            // 
+            this.IncorrectSharesLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IncorrectSharesLabel.Location = new System.Drawing.Point(49, 164);
+            this.IncorrectSharesLabel.Name = "IncorrectSharesLabel";
+            this.IncorrectSharesLabel.Size = new System.Drawing.Size(177, 23);
+            this.IncorrectSharesLabel.TabIndex = 13;
+            this.IncorrectSharesLabel.Text = "1234";
+            this.IncorrectSharesLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // RejectedSharesLabel
+            // 
+            this.RejectedSharesLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RejectedSharesLabel.Location = new System.Drawing.Point(49, 119);
+            this.RejectedSharesLabel.Name = "RejectedSharesLabel";
+            this.RejectedSharesLabel.Size = new System.Drawing.Size(177, 23);
+            this.RejectedSharesLabel.TabIndex = 11;
+            this.RejectedSharesLabel.Text = "1234 (5 Stales)";
+            this.RejectedSharesLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // AcceptedSharesLabel
+            // 
+            this.AcceptedSharesLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AcceptedSharesLabel.Location = new System.Drawing.Point(49, 76);
+            this.AcceptedSharesLabel.Name = "AcceptedSharesLabel";
+            this.AcceptedSharesLabel.Size = new System.Drawing.Size(177, 23);
+            this.AcceptedSharesLabel.TabIndex = 9;
+            this.AcceptedSharesLabel.Text = "1234 (5 Stales)";
+            this.AcceptedSharesLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // MiningPoolLabel
+            // 
+            this.MiningPoolLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MiningPoolLabel.Location = new System.Drawing.Point(48, 32);
+            this.MiningPoolLabel.Name = "MiningPoolLabel";
+            this.MiningPoolLabel.Size = new System.Drawing.Size(178, 17);
+            this.MiningPoolLabel.TabIndex = 7;
+            this.MiningPoolLabel.Text = "ETH.MININGPOOL.COM:1234";
+            this.MiningPoolLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // RigNameLabel
+            // 
+            this.RigNameLabel.AutoSize = true;
+            this.RigNameLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RigNameLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.RigNameLabel.Location = new System.Drawing.Point(16, 3);
+            this.RigNameLabel.Name = "RigNameLabel";
+            this.RigNameLabel.Size = new System.Drawing.Size(159, 30);
+            this.RigNameLabel.TabIndex = 0;
+            this.RigNameLabel.Text = "Mining_Rig_001";
+            // 
+            // RigStatusPanel
+            // 
+            this.RigStatusPanel.BackColor = System.Drawing.Color.Green;
+            this.RigStatusPanel.Controls.Add(this.IPLabel);
+            this.RigStatusPanel.Controls.Add(this.RefreshButton);
+            this.RigStatusPanel.Controls.Add(this.RigNameLabel);
+            this.RigStatusPanel.Location = new System.Drawing.Point(35, 87);
+            this.RigStatusPanel.Name = "RigStatusPanel";
+            this.RigStatusPanel.Size = new System.Drawing.Size(526, 54);
+            this.RigStatusPanel.TabIndex = 3;
+            // 
             // IPLabel
             // 
             this.IPLabel.AutoSize = true;
@@ -369,113 +470,27 @@ namespace MiningBuddy
             this.IPLabel.TabIndex = 11;
             this.IPLabel.Text = "127.0.0.1:1234";
             // 
-            // PoolReportedMiningSpeedLabel
+            // MiningBuddyVersionLabel
             // 
-            this.PoolReportedMiningSpeedLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PoolReportedMiningSpeedLabel.Location = new System.Drawing.Point(47, 253);
-            this.PoolReportedMiningSpeedLabel.Name = "PoolReportedMiningSpeedLabel";
-            this.PoolReportedMiningSpeedLabel.Size = new System.Drawing.Size(177, 23);
-            this.PoolReportedMiningSpeedLabel.TabIndex = 32;
-            this.PoolReportedMiningSpeedLabel.Text = "Reported 99 MH/s";
-            this.PoolReportedMiningSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.MiningBuddyVersionLabel.AutoSize = true;
+            this.MiningBuddyVersionLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MiningBuddyVersionLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.MiningBuddyVersionLabel.Location = new System.Drawing.Point(466, 723);
+            this.MiningBuddyVersionLabel.Name = "MiningBuddyVersionLabel";
+            this.MiningBuddyVersionLabel.Size = new System.Drawing.Size(121, 17);
+            this.MiningBuddyVersionLabel.TabIndex = 7;
+            this.MiningBuddyVersionLabel.Text = "MiningBuddy x.x.x.x";
+            this.MiningBuddyVersionLabel.Click += new System.EventHandler(this.MiningBuddyVersionLabel_Click);
             // 
-            // PoolCurrentMiningSpeedLabel
+            // PoolEarningsLabel
             // 
-            this.PoolCurrentMiningSpeedLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PoolCurrentMiningSpeedLabel.Location = new System.Drawing.Point(47, 208);
-            this.PoolCurrentMiningSpeedLabel.Name = "PoolCurrentMiningSpeedLabel";
-            this.PoolCurrentMiningSpeedLabel.Size = new System.Drawing.Size(177, 23);
-            this.PoolCurrentMiningSpeedLabel.TabIndex = 30;
-            this.PoolCurrentMiningSpeedLabel.Text = "Current 99 MH/s";
-            this.PoolCurrentMiningSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // PoolAverageMiningSpeedLabel
-            // 
-            this.PoolAverageMiningSpeedLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PoolAverageMiningSpeedLabel.Location = new System.Drawing.Point(47, 164);
-            this.PoolAverageMiningSpeedLabel.Name = "PoolAverageMiningSpeedLabel";
-            this.PoolAverageMiningSpeedLabel.Size = new System.Drawing.Size(177, 23);
-            this.PoolAverageMiningSpeedLabel.TabIndex = 28;
-            this.PoolAverageMiningSpeedLabel.Text = "Average 99 MH/s";
-            this.PoolAverageMiningSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // MiningPoolNameLabel
-            // 
-            this.MiningPoolNameLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MiningPoolNameLabel.Location = new System.Drawing.Point(48, 32);
-            this.MiningPoolNameLabel.Name = "MiningPoolNameLabel";
-            this.MiningPoolNameLabel.Size = new System.Drawing.Size(178, 17);
-            this.MiningPoolNameLabel.TabIndex = 28;
-            this.MiningPoolNameLabel.Text = "Ethminer";
-            this.MiningPoolNameLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // PoolAcceptedSharesLabel
-            // 
-            this.PoolAcceptedSharesLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PoolAcceptedSharesLabel.Location = new System.Drawing.Point(45, 76);
-            this.PoolAcceptedSharesLabel.Name = "PoolAcceptedSharesLabel";
-            this.PoolAcceptedSharesLabel.Size = new System.Drawing.Size(177, 23);
-            this.PoolAcceptedSharesLabel.TabIndex = 29;
-            this.PoolAcceptedSharesLabel.Text = "1234 (5 Stales)";
-            this.PoolAcceptedSharesLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // PoolIncorrectSharesLabel
-            // 
-            this.PoolIncorrectSharesLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PoolIncorrectSharesLabel.Location = new System.Drawing.Point(45, 119);
-            this.PoolIncorrectSharesLabel.Name = "PoolIncorrectSharesLabel";
-            this.PoolIncorrectSharesLabel.Size = new System.Drawing.Size(177, 23);
-            this.PoolIncorrectSharesLabel.TabIndex = 28;
-            this.PoolIncorrectSharesLabel.Text = "1234";
-            this.PoolIncorrectSharesLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.pictureBox17);
-            this.groupBox4.Controls.Add(this.GPUFanSpeedLabel);
-            this.groupBox4.Controls.Add(this.GPUPowerConsumptionLabel);
-            this.groupBox4.Controls.Add(this.GPUTemperatureLabel);
-            this.groupBox4.Controls.Add(this.pictureBox18);
-            this.groupBox4.Controls.Add(this.pictureBox19);
-            this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.Control;
-            this.groupBox4.Location = new System.Drawing.Point(271, 372);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(238, 163);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "GPU";
-            // 
-            // GPUPowerConsumptionLabel
-            // 
-            this.GPUPowerConsumptionLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.GPUPowerConsumptionLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GPUPowerConsumptionLabel.Location = new System.Drawing.Point(45, 127);
-            this.GPUPowerConsumptionLabel.Name = "GPUPowerConsumptionLabel";
-            this.GPUPowerConsumptionLabel.Size = new System.Drawing.Size(177, 23);
-            this.GPUPowerConsumptionLabel.TabIndex = 32;
-            this.GPUPowerConsumptionLabel.Text = "220W";
-            this.GPUPowerConsumptionLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // GPUFanSpeedLabel
-            // 
-            this.GPUFanSpeedLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GPUFanSpeedLabel.Location = new System.Drawing.Point(45, 83);
-            this.GPUFanSpeedLabel.Name = "GPUFanSpeedLabel";
-            this.GPUFanSpeedLabel.Size = new System.Drawing.Size(177, 23);
-            this.GPUFanSpeedLabel.TabIndex = 30;
-            this.GPUFanSpeedLabel.Text = "60%";
-            this.GPUFanSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // GPUTemperatureLabel
-            // 
-            this.GPUTemperatureLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GPUTemperatureLabel.Location = new System.Drawing.Point(45, 38);
-            this.GPUTemperatureLabel.Name = "GPUTemperatureLabel";
-            this.GPUTemperatureLabel.Size = new System.Drawing.Size(177, 23);
-            this.GPUTemperatureLabel.TabIndex = 28;
-            this.GPUTemperatureLabel.Text = "55°C";
-            this.GPUTemperatureLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.PoolEarningsLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PoolEarningsLabel.Location = new System.Drawing.Point(45, 297);
+            this.PoolEarningsLabel.Name = "PoolEarningsLabel";
+            this.PoolEarningsLabel.Size = new System.Drawing.Size(177, 23);
+            this.PoolEarningsLabel.TabIndex = 34;
+            this.PoolEarningsLabel.Text = "3.125 EUR/2h (22:13)";
+            this.PoolEarningsLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // RefreshButton
             // 
@@ -518,6 +533,16 @@ namespace MiningBuddy
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox19.TabIndex = 29;
             this.pictureBox19.TabStop = false;
+            // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Image = global::MiningBuddy.Properties.Resources.download__15_;
+            this.pictureBox20.Location = new System.Drawing.Point(10, 290);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(28, 32);
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox20.TabIndex = 35;
+            this.pictureBox20.TabStop = false;
             // 
             // pictureBox16
             // 
@@ -708,7 +733,7 @@ namespace MiningBuddy
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(13)))), ((int)(((byte)(21)))));
-            this.ClientSize = new System.Drawing.Size(598, 707);
+            this.ClientSize = new System.Drawing.Size(598, 746);
             this.Controls.Add(this.MiningBuddyVersionLabel);
             this.Controls.Add(this.RigStatusPanel);
             this.Controls.Add(this.groupBox1);
@@ -728,15 +753,16 @@ namespace MiningBuddy
             this.Load += new System.EventHandler(this.MiningBuddy_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MiningBuddy_MouseDown);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.RigStatusPanel.ResumeLayout(false);
             this.RigStatusPanel.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.RefreshButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
@@ -815,6 +841,8 @@ namespace MiningBuddy
         private System.Windows.Forms.Label GPUTemperatureLabel;
         private System.Windows.Forms.PictureBox pictureBox18;
         private System.Windows.Forms.PictureBox pictureBox19;
+        private System.Windows.Forms.Label PoolEarningsLabel;
+        private System.Windows.Forms.PictureBox pictureBox20;
     }
 }
 

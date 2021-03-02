@@ -10,6 +10,6 @@ namespace MiningBuddy.Models.Ethermine
     class SearchResult
     {
         public string Status { get; set; }
-        public Worker Data { get; set; }
+        public object Data { get; set; }
     }
 }

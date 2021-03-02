@@ -26,6 +26,20 @@ namespace MiningBuddy.Helpers
 
             IsInitialized = true;
         }
+        public IMiningPool GetPoolStatistics<T>() where T : IMiningPool
+        {
+            if (!IsInitialized) throw new Exception("Pool is not initialized");
+
+            var plainData = PoolClient.DownloadString(Pool.MinerEndpoint + Pool.StatisticsEndpoint);
+
+            var poolStatModel = JsonConvert.DeserializeObject<dynamic>(plainData);
+
+            //Todo: detect whether the model has a data property or not
+            //if (((object)poolStatModel).GetType().GetProperty("data") != null)
+                return JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(poolStatModel.data));
+            //else
+                //return JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(poolStatModel));
+        }
         public IMiningPoolWorker GetWorkerData<T>(string workerName) where T : IMiningPoolWorker, new()
         {
             if (!IsInitialized) throw new Exception("Pool is not initialized");
@@ -35,9 +49,13 @@ namespace MiningBuddy.Helpers
 
             var plainData = PoolClient.DownloadString(Pool.MinerEndpoint + worker.StatisticsEndpoint);
 
-            var workerModel = JsonConvert.DeserializeObject<Models.Ethermine.SearchResult>(plainData).Data;
+            var workerModel = JsonConvert.DeserializeObject<dynamic>(plainData);
 
-            return workerModel;
+            //Todo: detect whether the model has a data property or not
+            //if (((object)workerModel).GetType().GetProperty("data") != null)
+            return JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(workerModel.data));
+            //else
+                //return JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(workerModel));
         }
     }
 }

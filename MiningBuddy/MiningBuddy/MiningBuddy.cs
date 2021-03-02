@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MiningBuddy.Models.CDM;
+using MiningBuddy.Models.Interfaces;
 using MiningBuddy.Constants;
 
 namespace MiningBuddy
@@ -17,18 +17,37 @@ namespace MiningBuddy
     public partial class MiningBuddy : Form
     {
         private Config Config { get; }
-        private BitvavoHelper Bitvavo { get; }
+        private BitvavoHelper Bitvavo { get; set; }
+        private IMiningPool PoolStatistics { get; set; }
+        private PoolHelper PoolHelper { get; set; }
+
         public MiningBuddy()
         {
             Config = ConfigHelper.GetConfig();
-            Bitvavo = new BitvavoHelper(Config.Bitvavo);
-
+            InitHelpers();
             InitializeComponent();
         }
         private void MiningBuddy_Load(object sender, EventArgs e)
         {
             InitUI();
             InitTimers();
+        }
+
+        private void InitHelpers()
+        {
+            //Init Bitvavo
+            Bitvavo = new BitvavoHelper(Config.Bitvavo);
+
+            //Init Pool
+            PoolHelper = new PoolHelper();
+            switch (Config.PoolName.ToLower())
+            {
+                case "ethermine":
+                    PoolHelper.Init<Models.Ethermine.Ethermine>(Config.Address);
+                    break;
+                default:
+                    throw new ArgumentException("This pool is unknown, please fix");
+            }
         }
 
         #region UI stuff
@@ -66,7 +85,7 @@ namespace MiningBuddy
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
-        public static extern bool ReleaseCapture(); 
+        public static extern bool ReleaseCapture();
         private void MiningBuddy_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -80,6 +99,11 @@ namespace MiningBuddy
         #region Recurring stuff
         private void InitTimers()
         {
+            var twoHourTimer = new Timer();
+            twoHourTimer.Interval = 7200000;
+            twoHourTimer.Tick += TwoHourJobs;
+            twoHourTimer.Start();
+
             var fiveMinTimer = new Timer();
             fiveMinTimer.Interval = 300000;
             fiveMinTimer.Tick += EveryFiveMinuteJobs;
@@ -92,15 +116,25 @@ namespace MiningBuddy
 
             //Trigger manually
             EveryFiveMinuteJobs(null, null);
+            CalculateEarnings(); //Won't actually calculate, but will keep a reference in memory
         }
 
+        private void TwoHourJobs(object sender, EventArgs e)
+        {
+            //Calculate our earnings over the past 2 hours
+            CalculateEarnings();
+        }
         private void EveryFiveMinuteJobs(object sender, EventArgs e)
         {
+            //Check eth address in Bitvavo
             CheckBitvavoStatus();
+
+            //Fetch data about current rig from the pool
             RefreshPoolStatus();
         }
         private void EveryMinuteJobs(object sender, EventArgs e)
         {
+            //Fetch the rig status
             RefreshRigStatus();
         }
 
@@ -108,14 +142,14 @@ namespace MiningBuddy
         {
             if (!Bitvavo.IsConfigured)
             {
-                BitvavoStatusLabel.Text = Constants.BitvavoConstants.BITVAVODISCONNECTED;
+                BitvavoStatusLabel.Text = BitvavoConstants.BITVAVODISCONNECTED;
                 BitvavoStatusLabel.ForeColor = Color.OrangeRed;
                 return;
             }
             var bitAddress = Bitvavo.GetValue<Models.Bitvavo.Deposit>(new Dictionary<string, string>() { { "symbol", "ETH" } }).Address;
             if (bitAddress != Config.Address)
             {
-                BitvavoStatusLabel.Text = Constants.BitvavoConstants.BITVAVOADDRESSMISMATCH;
+                BitvavoStatusLabel.Text = BitvavoConstants.BITVAVOADDRESSMISMATCH;
                 BitvavoStatusLabel.ForeColor = Color.Red;
 
                 MessageBox.Show($"Bitvavo reports an ethereum address mismatch\n\nConfig: {Config.Address}\nBitvavo: {bitAddress}", "MiningBuddy Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -125,23 +159,34 @@ namespace MiningBuddy
             BitvavoStatusLabel.Text = BitvavoConstants.BITVAVOCONNECTED;
             BitvavoStatusLabel.ForeColor = Color.Green;
         }
+        private void CalculateEarnings()
+        {
+            //Todo: make this more dynamic, dont limit to ethermine
+            var newStats = PoolHelper.GetPoolStatistics<Models.Ethermine.Ethermine>();
+
+            PoolEarningsLabel.Text = $"Unknown";
+
+            if (PoolStatistics != null && PoolStatistics.Unpaid.HasValue)
+            {
+                var earnings = (newStats.Unpaid.Value - PoolStatistics.Unpaid.Value) * 0.000000000000000001;
+                var ethPrice = Bitvavo.GetValue<Models.Bitvavo.TickerPrice>(new Dictionary<string, string>() { { "market", "ETH-EUR" } }).Price;
+
+                earnings = Math.Round(earnings * ethPrice.Value, 3);
+
+                PoolEarningsLabel.Text = $"{earnings} EUR/2h ({DateTime.Now.ToString("HH:mm")})";
+            }
+
+            PoolStatistics = newStats;
+        }
         private void RefreshPoolStatus()
         {
-            var poolHelper = new PoolHelper();
-            Models.Interfaces.IMiningPoolWorker worker;
+            IMiningPoolWorker worker;
 
-            switch (Config.PoolName.ToLower())
-            {
-                case "ethermine":
-                    poolHelper.Init<Models.Ethermine.Ethermine>(Config.Address);
-                    worker = poolHelper.GetWorkerData<Models.Ethermine.Worker>(RigSelectComboBox.SelectedItem.ToString());
-                    break;
-                default:
-                    throw new ArgumentException("This pool is unknown, please fix");
-            }
-            
+            //Todo: make this more dynamic, dont limit to ethermine
+            worker = PoolHelper.GetWorkerData<Models.Ethermine.Worker>(RigSelectComboBox.SelectedItem.ToString());
 
-            MiningPoolNameLabel.Text = poolHelper.Pool.PoolName;
+
+            MiningPoolNameLabel.Text = PoolHelper.Pool.PoolName;
             PoolAverageMiningSpeedLabel.Text = $"Average {worker.HashRateToString(worker.AverageHashrate)}";
             PoolCurrentMiningSpeedLabel.Text = $"Current {worker.HashRateToString(worker.CurrentHashrate)}";
             PoolReportedMiningSpeedLabel.Text = $"Reported {worker.HashRateToString(worker.ReportedHashrate)}";
@@ -155,7 +200,7 @@ namespace MiningBuddy
             IPLabel.Text = $"{selRigConf.IP}:{selRigConf.Port}";
             var cdm = new CDMHelper(selRigConf);
             var rig = cdm.GetRealtimeRigData(out bool alive);
-            
+
             if (alive)
                 RigStatusPanel.BackColor = Color.Green;
             else
@@ -181,7 +226,7 @@ namespace MiningBuddy
 
                 return;
             }
-                
+
             MiningPoolLabel.Text = rig.Pool;
             AcceptedSharesLabel.Text = $"{rig.AcceptedShares} ({rig.AcceptedStales} Stales)";
             RejectedSharesLabel.Text = $"{rig.RejectedShares} ({rig.RejectedStales} Stales)";
@@ -204,7 +249,7 @@ namespace MiningBuddy
         private void ViewDumpLabel_Click(object sender, EventArgs e)
         {
             var viewer = new CDMDumpViewer(Config.Rigs.FirstOrDefault(r => r.Name.Equals(RigSelectComboBox.SelectedItem.ToString())));
-            viewer.ShowDialog();    
+            viewer.ShowDialog();
         }
 
         private void MiningBuddyVersionLabel_Click(object sender, EventArgs e)

@@ -67,7 +67,22 @@ namespace MiningBuddy.Helpers
             var endpoint = new T().EndPoint + ParamsToString(queryParams);
 
             UpdateHeaders("GET", endpoint);
-            var plainJson = Client.DownloadString(endpoint);
+
+            var plainJson = string.Empty;
+
+            //This try-catch is for debugging purposes, will be removed later on
+            try
+            {
+                plainJson = Client.DownloadString(endpoint);
+            }
+            catch (WebException ex)
+            {
+                var stream = ex.Response.GetResponseStream();
+                using (var sr = new StreamReader(stream))
+                {
+                    var result = sr.ReadToEnd();
+                }
+            }
 
             return JsonConvert.DeserializeObject<T>(plainJson);
         }
