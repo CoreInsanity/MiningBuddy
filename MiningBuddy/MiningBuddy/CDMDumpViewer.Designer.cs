@@ -29,6 +29,7 @@ namespace MiningBuddy
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CDMDumpViewer));
             this.HtmlBrowser = new System.Windows.Forms.WebBrowser();
             this.CloseButton = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).BeginInit();
@@ -64,6 +65,7 @@ namespace MiningBuddy
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.HtmlBrowser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CDMDumpViewer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CDMDumpViewer";

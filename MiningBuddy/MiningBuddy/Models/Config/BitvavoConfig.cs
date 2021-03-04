@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MiningBuddy.Models.Config
 {
-    class BitvavoConfig
+    public class BitvavoConfig
     {
         private string secretKey;
 
@@ -15,11 +15,7 @@ namespace MiningBuddy.Models.Config
         [JsonProperty("encodedSecretKey")]
         public string SecretKey
         {
-            get 
-            {
-                var bts = Convert.FromBase64String(secretKey);
-                return Encoding.UTF8.GetString(bts);
-            }
+            get => Helpers.CryptographyHelper.Base64Decode(secretKey);
             set
             {
                 secretKey = value;

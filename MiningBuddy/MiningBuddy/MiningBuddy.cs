@@ -16,7 +16,7 @@ namespace MiningBuddy
 {
     public partial class MiningBuddy : Form
     {
-        private Config Config { get; }
+        private Config Config { get; set; }
         private BitvavoHelper Bitvavo { get; set; }
         private IMiningPool PoolStatistics { get; set; }
         private PoolHelper PoolHelper { get; set; }
@@ -24,6 +24,9 @@ namespace MiningBuddy
         public MiningBuddy()
         {
             Config = ConfigHelper.GetConfig();
+
+            if (Config == null) OpenSettingsButton_Click(null, null);
+
             InitHelpers();
             InitializeComponent();
         }
@@ -54,10 +57,19 @@ namespace MiningBuddy
         private void InitUI()
         {
             MiningBuddyVersionLabel.Text = MiningBuddyConstants.APPVERSION;
-            EthAddressLabel.Text += Config.Address;
+            EthAddressLabel.Text = $"ETH Address: {Config.Address}";
 
+            RigSelectComboBox.Items.Clear();
             RigSelectComboBox.Items.AddRange(Config.Rigs.Select(r => r.Name).ToArray());
             RigSelectComboBox.SelectedIndex = 0;
+
+            if (Config.TopMost.HasValue) this.TopMost = Config.TopMost.Value;
+        }
+        private void LoadConfig()
+        {
+            Config = ConfigHelper.GetConfig();
+
+            InitUI();
         }
         private void CloseButton_Click(object sender, EventArgs e)
         {
@@ -157,7 +169,7 @@ namespace MiningBuddy
             }
 
             BitvavoStatusLabel.Text = BitvavoConstants.BITVAVOCONNECTED;
-            BitvavoStatusLabel.ForeColor = Color.Green;
+            BitvavoStatusLabel.ForeColor = Color.ForestGreen;
         }
         private void CalculateEarnings()
         {
@@ -169,11 +181,15 @@ namespace MiningBuddy
             if (PoolStatistics != null && PoolStatistics.Unpaid.HasValue)
             {
                 var earnings = (newStats.Unpaid.Value - PoolStatistics.Unpaid.Value) * 0.000000000000000001;
-                var ethPrice = Bitvavo.GetValue<Models.Bitvavo.TickerPrice>(new Dictionary<string, string>() { { "market", "ETH-EUR" } }).Price;
 
-                earnings = Math.Round(earnings * ethPrice.Value, 3);
-
-                PoolEarningsLabel.Text = $"{earnings} EUR/2h ({DateTime.Now.ToString("HH:mm")})";
+                if (Bitvavo.IsConfigured)
+                {
+                    var ethPrice = Bitvavo.GetValue<Models.Bitvavo.TickerPrice>(new Dictionary<string, string>() { { "market", "ETH-EUR" } }).Price;
+                    earnings = Math.Round(earnings * ethPrice.Value, 3);
+                    PoolEarningsLabel.Text = $"{earnings} EUR/2h ({DateTime.Now.ToString("HH:mm")})";
+                }
+                else
+                    PoolEarningsLabel.Text = $"{Math.Round(earnings, 3)} ETH/2h ({DateTime.Now.ToString("HH:mm")})";
             }
 
             PoolStatistics = newStats;
@@ -202,7 +218,7 @@ namespace MiningBuddy
             var rig = cdm.GetRealtimeRigData(out bool alive);
 
             if (alive)
-                RigStatusPanel.BackColor = Color.Green;
+                RigStatusPanel.BackColor = Color.ForestGreen;
             else
             {
                 RigStatusPanel.BackColor = Color.OrangeRed;
@@ -260,6 +276,23 @@ namespace MiningBuddy
         private void GraphicsCardLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void EthAddressLabel_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(Config.Address);
+        }
+
+        private void OpenSettingsButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            var settingsDialog = new Settings(Config);
+            settingsDialog.ShowDialog();
+
+            LoadConfig();
+
+            this.Show();
         }
     }
 }

@@ -12,5 +12,6 @@ namespace MiningBuddy.Constants
         public const string ABOUT = @"MiningBuddy is still in active development.";
         public const string NOTIFICATION = "MiningBuddy Notification";
         public const string WARNING = "MiningBuddy Warning";
+        public const string CONFIGURATION = "configuration.json";
     }
 }

@@ -29,70 +29,69 @@ namespace MiningBuddy
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MiningBuddy));
             this.EthAddressLabel = new System.Windows.Forms.Label();
             this.BitvavoStatusLabel = new System.Windows.Forms.Label();
             this.RigSelectComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.GPUFanSpeedLabel = new System.Windows.Forms.Label();
             this.GPUPowerConsumptionLabel = new System.Windows.Forms.Label();
             this.GPUTemperatureLabel = new System.Windows.Forms.Label();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.PoolEarningsLabel = new System.Windows.Forms.Label();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.PoolAcceptedSharesLabel = new System.Windows.Forms.Label();
             this.PoolIncorrectSharesLabel = new System.Windows.Forms.Label();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.MiningPoolNameLabel = new System.Windows.Forms.Label();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.PoolAverageMiningSpeedLabel = new System.Windows.Forms.Label();
             this.PoolReportedMiningSpeedLabel = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.PoolCurrentMiningSpeedLabel = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.ViewDumpLabel = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.GraphicsCardLabel = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.ReportedMiningSpeedLabel = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.EffectiveMiningSpeedLabel = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.AverageMiningSpeedLabel = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.MaxFoundDifficultyLabel = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.IncorrectSharesLabel = new System.Windows.Forms.Label();
             this.RejectedSharesLabel = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.AcceptedSharesLabel = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.MiningPoolLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.RigNameLabel = new System.Windows.Forms.Label();
             this.RigStatusPanel = new System.Windows.Forms.Panel();
             this.IPLabel = new System.Windows.Forms.Label();
-            this.MiningBuddyVersionLabel = new System.Windows.Forms.Label();
-            this.PoolEarningsLabel = new System.Windows.Forms.Label();
             this.RefreshButton = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.MiningBuddyVersionLabel = new System.Windows.Forms.Label();
+            this.OpenSettingsButton = new System.Windows.Forms.PictureBox();
             this.MinimizeButton = new System.Windows.Forms.PictureBox();
             this.CloseButton = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.RigStatusPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RefreshButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
@@ -100,6 +99,7 @@ namespace MiningBuddy
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -110,6 +110,9 @@ namespace MiningBuddy
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.RigStatusPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RefreshButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OpenSettingsButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).BeginInit();
             this.SuspendLayout();
@@ -117,6 +120,7 @@ namespace MiningBuddy
             // EthAddressLabel
             // 
             this.EthAddressLabel.AutoSize = true;
+            this.EthAddressLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EthAddressLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EthAddressLabel.ForeColor = System.Drawing.SystemColors.Control;
             this.EthAddressLabel.Location = new System.Drawing.Point(12, 688);
@@ -124,6 +128,7 @@ namespace MiningBuddy
             this.EthAddressLabel.Size = new System.Drawing.Size(104, 21);
             this.EthAddressLabel.TabIndex = 0;
             this.EthAddressLabel.Text = "ETH Address: ";
+            this.EthAddressLabel.Click += new System.EventHandler(this.EthAddressLabel_Click);
             // 
             // BitvavoStatusLabel
             // 
@@ -186,6 +191,16 @@ namespace MiningBuddy
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "GPU";
             // 
+            // pictureBox17
+            // 
+            this.pictureBox17.Image = global::MiningBuddy.Properties.Resources.power_icon;
+            this.pictureBox17.Location = new System.Drawing.Point(7, 117);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(36, 40);
+            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox17.TabIndex = 33;
+            this.pictureBox17.TabStop = false;
+            // 
             // GPUFanSpeedLabel
             // 
             this.GPUFanSpeedLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -217,6 +232,26 @@ namespace MiningBuddy
             this.GPUTemperatureLabel.Text = "55°C";
             this.GPUTemperatureLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Image = global::MiningBuddy.Properties.Resources.fan_icon;
+            this.pictureBox18.Location = new System.Drawing.Point(10, 70);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(29, 39);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox18.TabIndex = 31;
+            this.pictureBox18.TabStop = false;
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.Image = global::MiningBuddy.Properties.Resources.temperature_icon;
+            this.pictureBox19.Location = new System.Drawing.Point(9, 29);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(30, 36);
+            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox19.TabIndex = 29;
+            this.pictureBox19.TabStop = false;
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.pictureBox20);
@@ -242,6 +277,36 @@ namespace MiningBuddy
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Pool";
             // 
+            // pictureBox20
+            // 
+            this.pictureBox20.Image = global::MiningBuddy.Properties.Resources.download__15_;
+            this.pictureBox20.Location = new System.Drawing.Point(10, 290);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(28, 32);
+            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox20.TabIndex = 35;
+            this.pictureBox20.TabStop = false;
+            // 
+            // PoolEarningsLabel
+            // 
+            this.PoolEarningsLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PoolEarningsLabel.Location = new System.Drawing.Point(45, 297);
+            this.PoolEarningsLabel.Name = "PoolEarningsLabel";
+            this.PoolEarningsLabel.Size = new System.Drawing.Size(177, 23);
+            this.PoolEarningsLabel.TabIndex = 34;
+            this.PoolEarningsLabel.Text = "3.125 EUR/2h (22:13)";
+            this.PoolEarningsLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Image = global::MiningBuddy.Properties.Resources.incorrect_share_icon;
+            this.pictureBox16.Location = new System.Drawing.Point(9, 113);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(27, 29);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox16.TabIndex = 29;
+            this.pictureBox16.TabStop = false;
+            // 
             // PoolAcceptedSharesLabel
             // 
             this.PoolAcceptedSharesLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -262,6 +327,16 @@ namespace MiningBuddy
             this.PoolIncorrectSharesLabel.Text = "1234";
             this.PoolIncorrectSharesLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Image = global::MiningBuddy.Properties.Resources.accepted_share_icon;
+            this.pictureBox15.Location = new System.Drawing.Point(9, 70);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(27, 29);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox15.TabIndex = 28;
+            this.pictureBox15.TabStop = false;
+            // 
             // MiningPoolNameLabel
             // 
             this.MiningPoolNameLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -271,6 +346,26 @@ namespace MiningBuddy
             this.MiningPoolNameLabel.TabIndex = 28;
             this.MiningPoolNameLabel.Text = "Ethminer";
             this.MiningPoolNameLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Image = global::MiningBuddy.Properties.Resources.miningpool_icon;
+            this.pictureBox14.Location = new System.Drawing.Point(5, 23);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(43, 36);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox14.TabIndex = 29;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::MiningBuddy.Properties.Resources.mining_speed_icon;
+            this.pictureBox11.Location = new System.Drawing.Point(10, 246);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(28, 32);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 33;
+            this.pictureBox11.TabStop = false;
             // 
             // PoolAverageMiningSpeedLabel
             // 
@@ -291,6 +386,26 @@ namespace MiningBuddy
             this.PoolReportedMiningSpeedLabel.TabIndex = 32;
             this.PoolReportedMiningSpeedLabel.Text = "Reported 99 MH/s";
             this.PoolReportedMiningSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = global::MiningBuddy.Properties.Resources.mining_speed_icon;
+            this.pictureBox13.Location = new System.Drawing.Point(10, 157);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(28, 32);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox13.TabIndex = 29;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::MiningBuddy.Properties.Resources.mining_speed_icon;
+            this.pictureBox12.Location = new System.Drawing.Point(10, 201);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(28, 32);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 31;
+            this.pictureBox12.TabStop = false;
             // 
             // PoolCurrentMiningSpeedLabel
             // 
@@ -333,6 +448,16 @@ namespace MiningBuddy
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Miner";
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::MiningBuddy.Properties.Resources.commandline_icon;
+            this.pictureBox10.Location = new System.Drawing.Point(13, 424);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(31, 35);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 27;
+            this.pictureBox10.TabStop = false;
+            // 
             // ViewDumpLabel
             // 
             this.ViewDumpLabel.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -344,6 +469,16 @@ namespace MiningBuddy
             this.ViewDumpLabel.Text = "View dump";
             this.ViewDumpLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.ViewDumpLabel.Click += new System.EventHandler(this.ViewDumpLabel_Click);
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::MiningBuddy.Properties.Resources.graphics_card_icon;
+            this.pictureBox9.Location = new System.Drawing.Point(11, 376);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(34, 43);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 25;
+            this.pictureBox9.TabStop = false;
             // 
             // GraphicsCardLabel
             // 
@@ -357,6 +492,16 @@ namespace MiningBuddy
             this.GraphicsCardLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.GraphicsCardLabel.Click += new System.EventHandler(this.GraphicsCardLabel_Click);
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::MiningBuddy.Properties.Resources.mining_speed_icon;
+            this.pictureBox8.Location = new System.Drawing.Point(13, 335);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(28, 32);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 23;
+            this.pictureBox8.TabStop = false;
+            // 
             // ReportedMiningSpeedLabel
             // 
             this.ReportedMiningSpeedLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -366,6 +511,16 @@ namespace MiningBuddy
             this.ReportedMiningSpeedLabel.TabIndex = 22;
             this.ReportedMiningSpeedLabel.Text = "Reported 99 MH/s";
             this.ReportedMiningSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::MiningBuddy.Properties.Resources.mining_speed_icon;
+            this.pictureBox7.Location = new System.Drawing.Point(13, 290);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(28, 32);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 21;
+            this.pictureBox7.TabStop = false;
             // 
             // EffectiveMiningSpeedLabel
             // 
@@ -377,6 +532,16 @@ namespace MiningBuddy
             this.EffectiveMiningSpeedLabel.Text = "Effective 99 MH/s";
             this.EffectiveMiningSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::MiningBuddy.Properties.Resources.mining_speed_icon;
+            this.pictureBox5.Location = new System.Drawing.Point(13, 246);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(28, 32);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 19;
+            this.pictureBox5.TabStop = false;
+            // 
             // AverageMiningSpeedLabel
             // 
             this.AverageMiningSpeedLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -387,6 +552,16 @@ namespace MiningBuddy
             this.AverageMiningSpeedLabel.Text = "Average 99 MH/s";
             this.AverageMiningSpeedLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::MiningBuddy.Properties.Resources.max_difficulty_icon;
+            this.pictureBox6.Location = new System.Drawing.Point(13, 202);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(28, 32);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 17;
+            this.pictureBox6.TabStop = false;
+            // 
             // MaxFoundDifficultyLabel
             // 
             this.MaxFoundDifficultyLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -396,6 +571,16 @@ namespace MiningBuddy
             this.MaxFoundDifficultyLabel.TabIndex = 16;
             this.MaxFoundDifficultyLabel.Text = "99 GH/s (!)";
             this.MaxFoundDifficultyLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::MiningBuddy.Properties.Resources.incorrect_share_icon;
+            this.pictureBox4.Location = new System.Drawing.Point(13, 158);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(27, 29);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 14;
+            this.pictureBox4.TabStop = false;
             // 
             // IncorrectSharesLabel
             // 
@@ -417,6 +602,16 @@ namespace MiningBuddy
             this.RejectedSharesLabel.Text = "1234 (5 Stales)";
             this.RejectedSharesLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::MiningBuddy.Properties.Resources.rejected_share_icon;
+            this.pictureBox3.Location = new System.Drawing.Point(10, 111);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 34);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
+            // 
             // AcceptedSharesLabel
             // 
             this.AcceptedSharesLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -427,6 +622,16 @@ namespace MiningBuddy
             this.AcceptedSharesLabel.Text = "1234 (5 Stales)";
             this.AcceptedSharesLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::MiningBuddy.Properties.Resources.accepted_share_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(13, 70);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(27, 29);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
             // MiningPoolLabel
             // 
             this.MiningPoolLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -436,6 +641,16 @@ namespace MiningBuddy
             this.MiningPoolLabel.TabIndex = 7;
             this.MiningPoolLabel.Text = "ETH.MININGPOOL.COM:1234";
             this.MiningPoolLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MiningBuddy.Properties.Resources.miningpool_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(5, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // RigNameLabel
             // 
@@ -470,28 +685,6 @@ namespace MiningBuddy
             this.IPLabel.TabIndex = 11;
             this.IPLabel.Text = "127.0.0.1:1234";
             // 
-            // MiningBuddyVersionLabel
-            // 
-            this.MiningBuddyVersionLabel.AutoSize = true;
-            this.MiningBuddyVersionLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MiningBuddyVersionLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.MiningBuddyVersionLabel.Location = new System.Drawing.Point(466, 723);
-            this.MiningBuddyVersionLabel.Name = "MiningBuddyVersionLabel";
-            this.MiningBuddyVersionLabel.Size = new System.Drawing.Size(121, 17);
-            this.MiningBuddyVersionLabel.TabIndex = 7;
-            this.MiningBuddyVersionLabel.Text = "MiningBuddy x.x.x.x";
-            this.MiningBuddyVersionLabel.Click += new System.EventHandler(this.MiningBuddyVersionLabel_Click);
-            // 
-            // PoolEarningsLabel
-            // 
-            this.PoolEarningsLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PoolEarningsLabel.Location = new System.Drawing.Point(45, 297);
-            this.PoolEarningsLabel.Name = "PoolEarningsLabel";
-            this.PoolEarningsLabel.Size = new System.Drawing.Size(177, 23);
-            this.PoolEarningsLabel.TabIndex = 34;
-            this.PoolEarningsLabel.Text = "3.125 EUR/2h (22:13)";
-            this.PoolEarningsLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // RefreshButton
             // 
             this.RefreshButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -504,205 +697,29 @@ namespace MiningBuddy
             this.RefreshButton.TabStop = false;
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
-            // pictureBox17
+            // MiningBuddyVersionLabel
             // 
-            this.pictureBox17.Image = global::MiningBuddy.Properties.Resources.power_icon;
-            this.pictureBox17.Location = new System.Drawing.Point(7, 117);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(36, 40);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox17.TabIndex = 33;
-            this.pictureBox17.TabStop = false;
+            this.MiningBuddyVersionLabel.AutoSize = true;
+            this.MiningBuddyVersionLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MiningBuddyVersionLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.MiningBuddyVersionLabel.Location = new System.Drawing.Point(466, 723);
+            this.MiningBuddyVersionLabel.Name = "MiningBuddyVersionLabel";
+            this.MiningBuddyVersionLabel.Size = new System.Drawing.Size(121, 17);
+            this.MiningBuddyVersionLabel.TabIndex = 7;
+            this.MiningBuddyVersionLabel.Text = "MiningBuddy x.x.x.x";
+            this.MiningBuddyVersionLabel.Click += new System.EventHandler(this.MiningBuddyVersionLabel_Click);
             // 
-            // pictureBox18
+            // OpenSettingsButton
             // 
-            this.pictureBox18.Image = global::MiningBuddy.Properties.Resources.fan_icon;
-            this.pictureBox18.Location = new System.Drawing.Point(10, 70);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(29, 39);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox18.TabIndex = 31;
-            this.pictureBox18.TabStop = false;
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.Image = global::MiningBuddy.Properties.Resources.temperature_icon;
-            this.pictureBox19.Location = new System.Drawing.Point(9, 29);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(30, 36);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox19.TabIndex = 29;
-            this.pictureBox19.TabStop = false;
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.Image = global::MiningBuddy.Properties.Resources.download__15_;
-            this.pictureBox20.Location = new System.Drawing.Point(10, 290);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(28, 32);
-            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox20.TabIndex = 35;
-            this.pictureBox20.TabStop = false;
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Image = global::MiningBuddy.Properties.Resources.incorrect_share_icon;
-            this.pictureBox16.Location = new System.Drawing.Point(9, 113);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(27, 29);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox16.TabIndex = 29;
-            this.pictureBox16.TabStop = false;
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = global::MiningBuddy.Properties.Resources.accepted_share_icon;
-            this.pictureBox15.Location = new System.Drawing.Point(9, 70);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(27, 29);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox15.TabIndex = 28;
-            this.pictureBox15.TabStop = false;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Image = global::MiningBuddy.Properties.Resources.miningpool_icon;
-            this.pictureBox14.Location = new System.Drawing.Point(5, 23);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(43, 36);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox14.TabIndex = 29;
-            this.pictureBox14.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::MiningBuddy.Properties.Resources.mining_speed_icon;
-            this.pictureBox11.Location = new System.Drawing.Point(10, 246);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(28, 32);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 33;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = global::MiningBuddy.Properties.Resources.mining_speed_icon;
-            this.pictureBox13.Location = new System.Drawing.Point(10, 157);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(28, 32);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 29;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = global::MiningBuddy.Properties.Resources.mining_speed_icon;
-            this.pictureBox12.Location = new System.Drawing.Point(10, 201);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(28, 32);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 31;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::MiningBuddy.Properties.Resources.commandline_icon;
-            this.pictureBox10.Location = new System.Drawing.Point(13, 424);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(31, 35);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 27;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::MiningBuddy.Properties.Resources.graphics_card_icon;
-            this.pictureBox9.Location = new System.Drawing.Point(11, 376);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(34, 43);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 25;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::MiningBuddy.Properties.Resources.mining_speed_icon;
-            this.pictureBox8.Location = new System.Drawing.Point(13, 335);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(28, 32);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 23;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::MiningBuddy.Properties.Resources.mining_speed_icon;
-            this.pictureBox7.Location = new System.Drawing.Point(13, 290);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(28, 32);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 21;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::MiningBuddy.Properties.Resources.mining_speed_icon;
-            this.pictureBox5.Location = new System.Drawing.Point(13, 246);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(28, 32);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 19;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::MiningBuddy.Properties.Resources.max_difficulty_icon;
-            this.pictureBox6.Location = new System.Drawing.Point(13, 202);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(28, 32);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 17;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::MiningBuddy.Properties.Resources.incorrect_share_icon;
-            this.pictureBox4.Location = new System.Drawing.Point(13, 158);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(27, 29);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 14;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::MiningBuddy.Properties.Resources.rejected_share_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 111);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 34);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 10;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::MiningBuddy.Properties.Resources.accepted_share_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 70);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 29);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MiningBuddy.Properties.Resources.miningpool_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 36);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.OpenSettingsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.OpenSettingsButton.Image = global::MiningBuddy.Properties.Resources.settings_icon;
+            this.OpenSettingsButton.Location = new System.Drawing.Point(446, 30);
+            this.OpenSettingsButton.Name = "OpenSettingsButton";
+            this.OpenSettingsButton.Size = new System.Drawing.Size(32, 27);
+            this.OpenSettingsButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.OpenSettingsButton.TabIndex = 8;
+            this.OpenSettingsButton.TabStop = false;
+            this.OpenSettingsButton.Click += new System.EventHandler(this.OpenSettingsButton_Click);
             // 
             // MinimizeButton
             // 
@@ -734,6 +751,7 @@ namespace MiningBuddy
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(13)))), ((int)(((byte)(21)))));
             this.ClientSize = new System.Drawing.Size(598, 746);
+            this.Controls.Add(this.OpenSettingsButton);
             this.Controls.Add(this.MiningBuddyVersionLabel);
             this.Controls.Add(this.RigStatusPanel);
             this.Controls.Add(this.groupBox1);
@@ -744,24 +762,20 @@ namespace MiningBuddy
             this.Controls.Add(this.BitvavoStatusLabel);
             this.Controls.Add(this.EthAddressLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MiningBuddy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MiningBuddy";
-            this.TopMost = true;
             this.Load += new System.EventHandler(this.MiningBuddy_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MiningBuddy_MouseDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.RigStatusPanel.ResumeLayout(false);
-            this.RigStatusPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RefreshButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
@@ -769,6 +783,7 @@ namespace MiningBuddy
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -779,6 +794,10 @@ namespace MiningBuddy
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.RigStatusPanel.ResumeLayout(false);
+            this.RigStatusPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RefreshButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OpenSettingsButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizeButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CloseButton)).EndInit();
             this.ResumeLayout(false);
@@ -843,6 +862,7 @@ namespace MiningBuddy
         private System.Windows.Forms.PictureBox pictureBox19;
         private System.Windows.Forms.Label PoolEarningsLabel;
         private System.Windows.Forms.PictureBox pictureBox20;
+        private System.Windows.Forms.PictureBox OpenSettingsButton;
     }
 }
 

@@ -21,5 +21,19 @@ namespace MiningBuddy.Helpers
                 return builder.ToString();
             }
         }
+        public static string Base64Decode(string input)
+        {
+            if (string.IsNullOrEmpty(input)) return null;
+
+            var bts = Convert.FromBase64String(input);
+            return Encoding.UTF8.GetString(bts);
+        }
+        public static string Base64Encode(string input)
+        {
+            if (string.IsNullOrEmpty(input)) return null;
+
+            var bts = Encoding.UTF8.GetBytes(input);
+            return Convert.ToBase64String(bts);
+        }
     }
 }

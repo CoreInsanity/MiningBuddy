@@ -11,11 +11,19 @@ namespace MiningBuddy.Helpers
 {
     class ConfigHelper
     {
-        private const string CONFIG = "configuration.json";
         public static Config GetConfig()
         {
-            var plain = File.ReadAllText(CONFIG);
-            return JsonConvert.DeserializeObject<Config>(plain);
+            if (!File.Exists(Constants.MiningBuddyConstants.CONFIGURATION)) return null;
+
+            try
+            {
+                var plain = File.ReadAllText(Constants.MiningBuddyConstants.CONFIGURATION);
+                return JsonConvert.DeserializeObject<Config>(plain);
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 }
